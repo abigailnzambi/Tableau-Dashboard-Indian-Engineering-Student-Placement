@@ -1,48 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Tableau Dashboard</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abigail Nzambi | Data Portfolio</title>
+
+  <!-- Tableau Embedding API v3 -->
+  <script type="module" src="https://public.tableau.com/javascripts/api/tableau.embedding.3.latest.min.js"></script>
+
   <style>
     body {
       margin: 0;
-      padding: 20px;
       font-family: Arial, sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      background-color: #f9f9f9;
+      color: #222;
+      line-height: 1.6;
     }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
     h1 {
-      color: #333;
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      margin-top: 40px;
+      font-size: 1.4rem;
+      border-left: 4px solid #222;
+      padding-left: 10px;
+    }
+
+    p {
+      max-width: 750px;
+    }
+
+    .dashboard {
+      margin-top: 30px;
+    }
+
+    footer {
+      margin-top: 60px;
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    a {
+      color: #0056b3;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
-<body>
-  <h1>My Dashboard</h1>
 
-  < https://public.tableau.com/app/profile/abigail.nzambi8327/viz/IndianEngineeringStudentPlacementDashboard/Detailsdashboard >
-  <div class='tableauPlaceholder' id='viz123' style='position: relative'>
-    <noscript>
-      <a href='#'><img alt='Dashboard' src='https://public.tableau.com/static/images/YourImage.png' style='border: none' /></a>
-    </noscript>
-    <object class='tableauViz' style='display:none;'>
-      <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
-      <param name='embed_code_version' value='3' />
-      <param name='name' value='YourWorkbook/YourDashboardName' />
-      <param name='tabs' value='no' />
-      <param name='toolbar' value='yes' />
-    </object>
+<body>
+
+  <div class="container">
+
+    <h1>Indian Engineering Student Placement Analysis</h1>
+    <p>
+      This dashboard analyzes placement outcomes across engineering disciplines,
+      identifying salary trends, specialization impact, and employability drivers.
+      The objective was to uncover patterns influencing placement success and
+      compensation outcomes.
+    </p>
+
+    <h2>Problem</h2>
+    <p>
+      Engineering graduates face uneven placement outcomes depending on branch,
+      academic performance, and soft skill indicators. Stakeholders need clarity
+      on what factors most strongly correlate with successful placement.
+    </p>
+
+    <h2>Approach</h2>
+    <p>
+      Exploratory data analysis and feature segmentation were used to evaluate
+      salary distributions, branch-level performance, and placement probability.
+      Comparative filtering enables dynamic analysis by academic and demographic factors.
+    </p>
+
+    <h2>Key Insights</h2>
+    <p>
+      • Clear salary clustering across specific branches  
+      • Strong relationship between academic performance and placement rate  
+      • Noticeable compensation gap between top and median performers  
+    </p>
+
+    <div class="dashboard">
+      <tableau-viz
+        src="https://public.tableau.com/views/IndianEngineeringStudentPlacementDashboard/Detailsdashboard"
+        toolbar="bottom"
+        hide-tabs>
+      </tableau-viz>
+    </div>
+
+    <footer>
+      View more projects on 
+      <a href="https://public.tableau.com/app/profile/abigail.nzambi8327" target="_blank">
+        Tableau Public
+      </a>
+    </footer>
+
   </div>
-  <script type='text/javascript'>
-    var divElement = document.getElementById('viz123');
-    var vizElement = divElement.getElementsByTagName('object')[0];
-    vizElement.style.width='100%';
-    vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
-    var scriptElement = document.createElement('script');
-    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
-    vizElement.parentNode.insertBefore(scriptElement, vizElement);
-  </script>
 
 </body>
 </html>
